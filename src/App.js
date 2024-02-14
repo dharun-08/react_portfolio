@@ -1,24 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
-
+import { React } from 'react';
+import SplashScreen from './Screens/SplashScreen';
+import { Route, Routes } from 'react-router-dom';
+import About from './modules/About.jsx';
+import Project from './modules/Projects.jsx';
+import Contact from './modules/Contact.jsx';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <div className='App bg-gray-800'>
+    <Routes>
+        <Route path='/' element={<SplashScreen />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/project' element={<Project />} />
+        <Route path='/contact' element={<Contact />} />
+    </Routes>
+  </div>
   );
 }
 

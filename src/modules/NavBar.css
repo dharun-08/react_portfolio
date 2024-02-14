@@ -1,0 +1,8 @@
+/* NavBar.css */
+.navbar {
+  @apply fixed top-0 left-0 w-full transition-transform ease-in-out duration-500 transform -translate-y-full;
+}
+
+.navbar.visible {
+  @apply transform translate-y-0;
+}
